@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.example.testgetplus.presentation.activity.voucher.VoucherViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".presentation.activity.voucher.VoucherActivity">
+
+        <include layout="@layout/navigation_bar_with_title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_voucher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            tools:listitem="@layout/item_view_voucher"
+            tools:itemCount="4" />
+
+    </LinearLayout>
+</layout>
